@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap');
+.Noto {
+    font-family: 'Noto Serif Bengali';
+}
+
+.scrolling {
+    overflow: auto;
+}
+
+
+/* width */
+
+.scrolling::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+
+/* Track */
+
+.scrolling::-webkit-scrollbar-track {
+    border-radius: 10px;
+    cursor: move;
+}
+
+
+/* Handle */
+
+.scrolling::-webkit-scrollbar-thumb {
+    background: #dddee2;
+    border-radius: 10px;
+}
+
+.circularRotate {
+    animation-name: rotate;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+    65% {
+        transform: translate(0, 15px);
+    }
+    to {
+        transform: translate(0, -0px);
+    }
+}

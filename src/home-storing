@@ -1,0 +1,684 @@
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  Image,
+  SimpleGrid,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
+import React from 'react';
+import { AiOutlineCheck } from 'react-icons/ai';
+import { HiOutlineDocumentReport } from 'react-icons/hi';
+import tworowdot from '../res/2rowdot.png';
+import threerowdot from '../res/3rowdot.png';
+import houseWife from '../res/Coursti ki apnar jnno/frontPage_housewife.json';
+import studentWithClock from '../res/Coursti ki apnar jnno/frontPage_student with clock.json';
+import kivabeShikhben from '../res/kivabeShikhben.svg';
+import Logo from '../res/logo.jpeg';
+import manInHat from '../res/maninhat.png';
+import Footer from './Footer';
+import LottieMaking from './LottieMaking';
+import NavBurger from './NavBurger';
+
+export default function Home() {
+  const kivabeShikhbenArray = [
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description:
+        'শেখার শুরুটা হাতেকলমে ইন্টার‌্যাক্টিভ ভিডিও ক্লাসের মাধ্যমে ',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+    {
+      src: kivabeShikhben,
+      title: 'ভিডিও ক্লাস',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    },
+  ];
+
+  const CourseSheshe = [
+    {
+      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYAXkAt0MQoJ1AbR1ByF9-96ckjcu1yg8-Q&usqp=CAU',
+      name: 'Youtube',
+    },
+    {
+      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQakXV3SIFtsgEYeHlmUe8CbhA7grDwSxNfNA&usqp=CAU',
+      name: 'Facebook',
+    },
+    {
+      src: 'https://www.f-cdn.com/assets/main/en/assets/freelancer-logo-open-graph.png',
+      name: 'Freelancer dot com',
+    },
+    {
+      src: 'https://user-images.githubusercontent.com/70473461/92360592-5a3bb800-f0ed-11ea-8dce-dd95b72c7825.png',
+      name: 'Fiver dot com',
+    },
+    {
+      src: 'https://user-images.githubusercontent.com/70473461/92360592-5a3bb800-f0ed-11ea-8dce-dd95b72c7825.png',
+      name: 'Local job',
+    },
+    {
+      src: 'https://user-images.githubusercontent.com/70473461/92360592-5a3bb800-f0ed-11ea-8dce-dd95b72c7825.png',
+      name: 'Remote job',
+    },
+  ];
+
+  return (
+    <Box>
+      {/* nav and head */}
+      <Box w="100%" minH="600px" h="auto" overflow="hidden">
+        <Flex
+          flexFlow={'column'}
+          justifyContent="center"
+          alignItems="center"
+          w="100%"
+        >
+          <Box
+            w="100%"
+            h="200px"
+            bg="black"
+            zIndex={-1}
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% 43%, 0% 100%)',
+            }}
+            position="absolute"
+            top={0}
+          ></Box>
+          <Flex justifyContent={'space-between'} w="100%" p={3} color="white">
+            <Image src={Logo} w={36} h={12} />
+            <NavBurger />
+          </Flex>
+          <Text
+            color="white"
+            fontWeight={'semibold'}
+            textAlign="center"
+            w="100%"
+            mb={3}
+          >
+            প্রফেশনাল গ্রাফিক ডিজাইন অ্যান্ড ফ্রিল্যান্সিং
+          </Text>
+          <Image
+            src="https://www.igeeksblog.com/wp-content/uploads/2021/07/ways-to-fix-youtube-videos-not-playing-in-mac-safari.jpg"
+            h={'60%'}
+            w={'80%'}
+            fallbacksrc="https://via.placeholder.com/300/CCCCCC/CCCCCC"
+            rounded={'lg'}
+            objectFit={'cover'}
+            boxShadow="2xl"
+          />
+          <Text w={'80%'} mt={5} textAlign="justify">
+            নিজের প্রতিভা লক্ষ কোটি মানুষের সামনে উপস্থাপন করবার মাধ্যমে লক্ষ
+            লক্ষ টাকা উপার্জনের অন্যতম সেরা প্লাটফর্ম YouTube এবং ফেসবুক
+            ওয়াচ।এসব প্লাটফর্মে কন্টেন্ট ক্রিয়েশন সম্পর্কে অনেকে দেখালেও সফলতার
+            সিক্রেটস কেউই শেয়ার করে না।যার ফলশ্রুতিতে অনেকে দীর্ঘদিন চেষ্টা করেও
+            সফলতা থেকে অনেক দূরে। এসব বিষয় বিবেচনা করে গত বছরে মায়াজালের এডমিন
+            প্যানেল কিছু আগ্রহী মানুষকে যত্ন সহকারে হাতে কলমে শিখেয়েছে অনলাইন
+            প্ল্যাটফর্মে সফলতার মূলমন্ত্র!যাদের মধ্যে বেশিরভাগই আলহামদুলিল্লাহ্
+            সফল হয়েছেন।আর,আপনাদের প্রতিটি Silver Button অর্জনের খবর আমাদের
+            Golden Button হাতে পাওয়া থেকে অনেক বেশি আনন্দের ছিলো।এই আনন্দ আরো
+            বেশি বাড়িতে দেবার প্রয়াসে ২০২২ সালের আজকে দিন পর্যন্ত পরিবর্তিত হওয়া
+            সকল বিষয় ও ভবিষ্যতের সম্ভাব্য পরিবর্তন নিয়ে পূর্বের চাইতে আরো
+            সমৃদ্ধভাবে শেখানো। পাশাপাশি শেয়ার করা হবে আমাদের সফলতার সিক্রেটস!
+            তবে,এ সুবর্ণ সুযোগ শুধুমাত্র তাদের জন্য যারা এই মূল্যবান সম্পদগুলোর
+            গোপনীয়তা রক্ষা করতে কঠোর পরিশ্রমের বিনিময়ে সফলতা ছিনিয়ে আনবার
+            ব্যাপারে দৃঢ় প্রতিজ্ঞাবদ্ধ/সংকল্পবদ্ধ।
+          </Text>
+        </Flex>
+      </Box>
+
+      {/* man in hat */}
+      <Box w="100%" h="600px" position={'relative'} overflow="hidden">
+        <Box
+          position="absolute"
+          w="100%"
+          h="600px"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          w="70%"
+          flexFlow={'column'}
+          position="absolute"
+          alignItems={'start'}
+          top="25%"
+          left="20%"
+          style={{
+            whiteSpace: 'pre-line',
+          }}
+        >
+          <Text
+            fontWeight={'bold'}
+            bg="#23be43"
+            p={3}
+            color="white"
+            rounded="full"
+            ml={10}
+            fontFamily="kongshoMJ"
+          >
+            ভর্তি হউন
+          </Text>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Icon as={AiOutlineCheck} color="green" fontSize={30} />
+            <Text>Course Duration : 5 months</Text>
+          </Flex>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Icon as={AiOutlineCheck} color="green" fontSize={30} />
+            <Text>total class :98</Text>
+          </Flex>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Icon as={AiOutlineCheck} color="green" fontSize={30} />
+            <Text>course fee :20,000 taka</Text>
+          </Flex>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Icon as={AiOutlineCheck} color="green" fontSize={30} />
+            <Text>praromvik khoroch:4000tk</Text>
+          </Flex>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Text>(baki 16000 tk sompurno</Text>
+          </Flex>
+          <Flex justifyContent={'center'} alignItems="center">
+            <Text>course sheshe porishodh korben)</Text>
+          </Flex>
+        </Flex>
+        <Image src={manInHat} w="100%" position="absolute" right="-250px" />
+
+        <Image src={tworowdot} position={'absolute'} bottom={0} left={0} />
+      </Box>
+
+      {/* kivabe shikhbe */}
+      <Box w="100%" mt={5} position="relative">
+        <Flex p={5} justifyContent={'start'} alignItems="center">
+          <Icon fontSize={30} as={HiOutlineDocumentReport} />
+          <Text ml={3} fontWeight="semibold" fontSize={20}>
+            Kivabe shikhben
+          </Text>
+        </Flex>
+        <SimpleGrid
+          columns={2}
+          gap={3}
+          justifyContent="center"
+          alignItems={'center'}
+          p={10}
+        >
+          {kivabeShikhbenArray.map((el, i) => (
+            <Flex
+              key={Math.random()}
+              flexFlow="column"
+              h="300px"
+              justifyContent={'center'}
+              alignItems="center"
+              boxShadow={'0 0 5px 2px #e6e1e1'}
+              rounded="3xl"
+            >
+              <Image src={el.src} w={60} h={60} />
+              <Text fontWeight="bold">{el.title}</Text>
+              <Text fontSize={'xs'} pb={5} px={3} textAlign={'center'}>
+                {el.description}
+              </Text>
+            </Flex>
+          ))}
+        </SimpleGrid>
+        <Image src={threerowdot} right={0} mt={3} ml="auto" />
+      </Box>
+
+      {/* course methodology */}
+      <Box position={'relative'} mt={3} py={10} h="auto" minH="600px">
+        <Box
+          position="absolute"
+          w="100%"
+          h="100%"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          pb={5}
+          pl={5}
+          pt={'15%'}
+          justifyContent={'start'}
+          alignItems="center"
+        >
+          <Icon fontSize={30} as={HiOutlineDocumentReport} />
+          <Text ml={3} fontWeight="semibold" fontSize={40}>
+            Course Methodology
+          </Text>
+        </Flex>
+        <Text w="100%" px={5} mb={'19%'}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+          voluptatibus incidunt beatae. Sed, earum velit iste sunt vitae omnis
+          fuga ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus ex odio accusantium qui doloremque, magni voluptate pariatur
+          dignissimos amet quaerat. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Saepe accusantium dolores commodi culpa corrupti
+          voluptatem. Officia, nam. In qui voluptatem vero dicta facere illum et
+          perspiciatis atque saepe eveniet sunt numquam inventore, error
+          similique quidem quasi nobis nesciunt maiores unde quae sapiente
+          magnam porro possimus! Cum saepe fuga rem unde sed autem, quam sequi?
+          Perferendis enim, ut quam voluptatibus incidunt beatae. Sed, earum
+          velit iste sunt vitae omnis fuga ex.
+        </Text>
+      </Box>
+
+      <Flex position={'relative'} pb={80}>
+        <Text
+          w="100%"
+          textAlign={'center'}
+          fontWeight="semibold"
+          fontSize="x-large"
+        >
+          Course ti ki apnar jonno
+        </Text>
+        <Image
+          src={threerowdot}
+          w="90px"
+          h="90px"
+          position={'absolute'}
+          bottom="0"
+          left="0"
+        />
+      </Flex>
+
+      {/* shikkharthi */}
+      <Box position={'relative'} mt={3} py={16} h="auto">
+        <Box
+          position="absolute"
+          w="100%"
+          h="100%"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          w="100%"
+          justifyContent={'space-between'}
+          alignItems="center"
+          position={'relative'}
+          pt={8}
+          pr={8}
+        >
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={30}>
+            apni ki ekjon shikkharthi ?
+          </Text>
+          <Box w="60%" position="absolute" zIndex={-1} bottom="5" right="5">
+            <LottieMaking animationData={studentWithClock} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5} textAlign="justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+          voluptatibus incidunt beatae. Sed, earum velit iste sunt vitae omnis
+          fuga ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus ex odio accusantium qui doloremque, magni voluptate pa
+        </Text>
+      </Box>
+
+      {/* GRIHINI */}
+      <Box>
+        <Flex justifyContent={'space-between'} alignItems="center">
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={20}>
+            apni ki ekjon grihini
+          </Text>
+          <Box w="55%">
+            <LottieMaking animationData={houseWife} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+        </Text>
+      </Box>
+
+      {/* chakrijibi */}
+      <Box position={'relative'} mt={3} py={16} h="auto" minH="600px">
+        <Box
+          position="absolute"
+          w="100%"
+          h="100%"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          w="100%"
+          justifyContent={'space-between'}
+          alignItems="center"
+          position={'relative'}
+          py={8}
+          pr={8}
+        >
+          <Image
+            src={threerowdot}
+            w="90px"
+            h="90px"
+            position={'absolute'}
+            top="0"
+            left="0"
+          />
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={45}>
+            apni ki ekjon chakrijibi ?
+          </Text>
+          <Box w="70%" pt={3}>
+            <LottieMaking animationData={studentWithClock} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5} mb={'19%'} textAlign="justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+          voluptatibus incidunt beatae. Sed, earum velit iste sunt vitae omnis
+          fuga ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus ex odio accusantium qui doloremque, magni voluptate pa
+        </Text>
+      </Box>
+
+      {/* probashi */}
+      <Box>
+        <Flex justifyContent={'space-between'} alignItems="center">
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={20}>
+            apni ki ekjon probashi
+          </Text>
+          <Box w="55%">
+            <LottieMaking animationData={houseWife} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+        </Text>
+      </Box>
+
+      {/* uddokta */}
+      <Box position={'relative'} mt={3} py={16} h="auto" minH="600px">
+        <Box
+          position="absolute"
+          w="100%"
+          h="100%"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          w="100%"
+          justifyContent={'space-between'}
+          alignItems="center"
+          position={'relative'}
+          py={8}
+          pr={8}
+        >
+          <Image
+            src={threerowdot}
+            w="90px"
+            h="90px"
+            position={'absolute'}
+            top="0"
+            left="0"
+          />
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={45}>
+            apni ki ekjon uddokta ?
+          </Text>
+          <Box w="70%" pt={3}>
+            <LottieMaking animationData={studentWithClock} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5} mb={'19%'} textAlign="justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+          voluptatibus incidunt beatae. Sed, earum velit iste sunt vitae omnis
+          fuga ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus ex odio accusantium qui doloremque, magni voluptate pa
+        </Text>
+      </Box>
+
+      <Text mt={10} w="100%" textAlign={'center'}>
+        Course sheshe apni kothay kaj korte parben?
+      </Text>
+      <SimpleGrid columns={3} gap={3}>
+        {CourseSheshe.map((el, i) => (
+          <Flex
+            flexFlow={'column'}
+            justifyContent={'center'}
+            alignItems="center"
+          >
+            <Image
+              src={el.src}
+              border="10px solid"
+              borderColor={'white'}
+              boxShadow="xl"
+              h={{ base: 20, md: 40 }}
+              w={{ base: 20, md: 40 }}
+              fallbacksrc="https://via.placeholder.com/300/CCCCCC/CCCCCC"
+              rounded={'full'}
+              objectFit={'cover'}
+            />
+            <Text>{el.name}</Text>
+          </Flex>
+        ))}
+      </SimpleGrid>
+
+      <Flex p={3} mt={40} justifyContent={'start'} alignItems="center">
+        <Icon fontSize={30} as={HiOutlineDocumentReport} />
+        <Text ml={3} fontWeight="semibold" fontSize={20}>
+          Help and support
+        </Text>
+      </Flex>
+      <Text px={5}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ea
+        sed quas, sapiente aperiam ab corrupti provident culpa voluptatibus
+        animi, ipsa exercitationem nisi dolore. Nostrum, ab. Iste soluta minima
+        velit fuga? Odio minima excepturi totam, distinctio sit cupiditate neque
+        consequuntur culpa nostrum nemo voluptate magni perspiciatis temporibus
+        beatae dolores tempore harum non! Dolor doloremque laborum consequuntur
+        dolores officia quidem impedit nemo, et possimus praesentium animi iste
+        enim aliquid quisquam quos?
+      </Text>
+
+      <Text fontSize={45} color={'green'} textAlign="center" mt={8}>
+        poroborti class kobe theke shuru?
+      </Text>
+      <Text textAlign="center">
+        25 june 2020 tarikh theke poroborti batch er class shuru
+      </Text>
+      <VStack>
+        <Button
+          colorScheme={'green'}
+          fontSize={20}
+          p={3}
+          my={10}
+          rounded="full"
+        >
+          Vorti houn
+        </Button>
+      </VStack>
+
+      {/* kivabe vorti hobo */}
+      <Box position={'relative'} mt={3} py={16} h="auto" minH="600px">
+        <Box
+          position="absolute"
+          w="100%"
+          h="100%"
+          bg="#cae3e1"
+          top={0}
+          left={0}
+          zIndex={-1}
+          style={{
+            clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0% 100%)',
+          }}
+        ></Box>
+        <Flex
+          w="100%"
+          justifyContent={'space-between'}
+          alignItems="center"
+          position={'relative'}
+          py={8}
+          pr={8}
+        >
+          <Image
+            src={threerowdot}
+            w="90px"
+            h="90px"
+            position={'absolute'}
+            top="0"
+            left="0"
+          />
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={45}>
+            ami kivabe vorti hobo ?
+          </Text>
+          <Box w="70%" pt={3}>
+            <LottieMaking animationData={studentWithClock} w="100%" />
+          </Box>
+        </Flex>
+        <Text w="100%" px={5} mb={'19%'} textAlign="justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          odio accusantium qui doloremque, magni voluptate pariatur dignissimos
+          amet quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Saepe accusantium dolores commodi culpa corrupti voluptatem. Officia,
+          nam. In qui voluptatem vero dicta facere illum et perspiciatis atque
+          saepe eveniet sunt numquam inventore, error similique quidem quasi
+          nobis nesciunt maiores unde quae sapiente magnam porro possimus! Cum
+          saepe fuga rem unde sed autem, quam sequi? Perferendis enim, ut quam
+          voluptatibus incidunt beatae. Sed, earum velit iste sunt vitae omnis
+          fuga ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloribus ex odio accusantium qui doloremque, magni voluptate pa
+        </Text>
+      </Box>
+
+      <Text
+        fontWeight={'thin'}
+        textAlign="center"
+        fontSize={20}
+        mt={10}
+        fontStyle="italic"
+      >
+        Er por kono proshno thakle mesenger e jiggash korte paren
+      </Text>
+      <Box position={'relative'}>
+        {/* <Flex justifyContent={'space-between'} alignItems="center">
+          <Text ml={5} fontWeight="semibold" alignSelf={'end'} fontSize={20}>
+            apni ki ekjon probashi
+          </Text>
+          <Box w="55%">
+            <LottieMaking animationData={houseWife} w="100%" />
+          </Box>
+        </Flex> */}
+
+        <Flex justifyContent={'space-between'} alignItems="center">
+          <Text
+            ml={5}
+            fontWeight="semibold"
+            alignSelf={'end'}
+            color="red"
+            fontSize={20}
+          >
+            shortaboli:
+          </Text>
+          <Image src={kivabeShikhben} w="48%" maxW="500px" />
+        </Flex>
+        <Text w="100%" px={5}>
+          1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+          numquam tempore aperiam architecto optio, modi ex totam sunt fugit
+          rerum.
+        </Text>
+        <Text w="100%" px={5}>
+          2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+          suscipit.
+        </Text>
+        <Text w="100%" px={5}>
+          3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut rerum
+          dolore dignissimos vero eum itaque doloribus odit, maxime mollitia,
+          dolor eveniet harum? Eveniet, illum ut! Rem asperiores perferendis aut
+          quam!
+        </Text>
+      </Box>
+
+      <Footer />
+    </Box>
+  );
+}
